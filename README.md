@@ -1,4 +1,4 @@
-###Overview
+### Overview
 
 This project contains sample code for blog posts [AshishOnTech](https://ashishontech.xyz/)
 
@@ -8,12 +8,12 @@ This project contains sample code for blog posts [AshishOnTech](https://ashishon
  
 #### [Kafka]()
  
- - Sample kafka COnsumer and Producer
+ - Sample kafka Consumer and Producer
  
-#### Karate Testing
+#### [Karate Testing](https://ashishontech.xyz/karate-in-action-rest-api-testing/)
 
- - Demo code for Karate Testing
+ - Demo code for Karate Testing. Refer [here](https://github.com/ashishkumar9211/ashishontech/tree/master/integration-test) for more detail.
  
  
-### Kubernetes Deployment with Docker Container - WIP
+#### Kubernetes Deployment - WIP
  

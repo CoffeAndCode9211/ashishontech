@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-2-thread-1","id":1},{"content":"pool-2-thread-2","id":2},{"content":"pool-2-thread-3","id":3},{"content":"pool-2-thread-4","id":4},{"content":"pool-2-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[1:15]","start":1621099260728,"end":1621099261147,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[1:15] 22:51:00.728-22:51:01.147 Save User Detail"},{"id":2,"group":2,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.1:35]","start":1621099260728,"end":1621099261160,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.1:35] 22:51:00.728-22:51:01.160 1 - No Request Body:"},{"id":3,"group":3,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.2:36]","start":1621099260728,"end":1621099261150,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.2:36] 22:51:00.728-22:51:01.150 2 - Wrong Request Body:"},{"id":4,"group":4,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.3:37]","start":1621099260728,"end":1621099261148,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.3:37] 22:51:00.728-22:51:01.148 3 - Empty Request Body:"},{"id":5,"group":5,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.4:38]","start":1621099260728,"end":1621099261156,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.4:38] 22:51:00.728-22:51:01.156 4 - UserName is Null:"},{"id":6,"group":1,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.5:39]","start":1621099261160,"end":1621099261174,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.5:39] 22:51:01.160-22:51:01.174 5 - UserName is Empty:"},{"id":7,"group":4,"content":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.6:40]","start":1621099261158,"end":1621099261181,"title":"com\/ashishontech\/karate\/user\/adduser\/AddUser[2.6:40] 22:51:01.158-22:51:01.181 6 - Password is Null:"},{"id":8,"group":3,"content":"com\/ashishontech\/karate\/user\/getuser\/GetUser[1:7]","start":1621099261166,"end":1621099261202,"title":"com\/ashishontech\/karate\/user\/getuser\/GetUser[1:7] 22:51:01.166-22:51:01.202 Get All Users"},{"id":9,"group":5,"content":"com\/ashishontech\/karate\/user\/getuser\/GetUser[2:14]","start":1621099261163,"end":1621099261203,"title":"com\/ashishontech\/karate\/user\/getuser\/GetUser[2:14] 22:51:01.163-22:51:01.203 Get User by userName"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

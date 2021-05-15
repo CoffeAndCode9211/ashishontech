@@ -1,8 +1,5 @@
 HELP.md
-target/test-classes/
-target/surefire-reports/
-target/maven-status/
-target/generated-test-sources/
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

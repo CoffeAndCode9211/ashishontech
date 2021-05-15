@@ -31,10 +31,10 @@ Feature: Test Save User Detail
 
     Examples:
 
-      | index | useCase            | requestJson                        | status | response                                                                                                            |
-      | 1     | No Request Body    | null                               | 400    | {"timestamp":"#string","status":400,"error":"#string","trace":"#string","message":"#string","path":"/karate/users"} |
-      | 2     | Wrong Request Body | 'test'                             | 415    | {"timestamp":"#string","status":415,"error":"#string","trace":"#string","message":"#string","path":"/karate/users"} |
-      | 3     | Empty Request Body | {}                                 | 400    | {"password":"must not be null","userName":"must not be blank"}                                                      |
-      | 4     | UserName is Null   | {'password': '123'}                | 400    | {"userName":"must not be blank"}                                                                                    |
-      | 5     | UserName is Empty  | {"userName": "","password": "123"} | 400    | {"userName":"must not be blank"}                                                                                    |
-      | 6     | Password is Null   | {"userName": "Test"}               | 400    | {"password":"must not be null"}                                                                                     |
+      | index | useCase            | requestJson                        | status | response                                                                                          |
+      | 1     | No Request Body    | null                               | 400    | {"timestamp":"#string","status":400,"error":"#string","message":"#string","path":"/karate/users"} |
+      | 2     | Wrong Request Body | 'test'                             | 415    | {"timestamp":"#string","status":415,"error":"#string","message":"#string","path":"/karate/users"} |
+      | 3     | Empty Request Body | {}                                 | 400    | {"password":"must not be null","userName":"must not be blank"}                                    |
+      | 4     | UserName is Null   | {'password': '123'}                | 400    | {"userName":"must not be blank"}                                                                  |
+      | 5     | UserName is Empty  | {"userName": "","password": "123"} | 400    | {"userName":"must not be blank"}                                                                  |
+      | 6     | Password is Null   | {"userName": "Test"}               | 400    | {"password":"must not be null"}                                                                   |
