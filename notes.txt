@@ -1,0 +1,54 @@
+###Kubernetes Setup using minikube
+
+brew install minikube
+minikube start --driver=docker
+minikube config set driver docker
+
+###Create Dashboard
+
+minikube dashboard
+
+###Install App and Service
+
+kubectl create deployment sample-spring-app --image=testdata451/sample-spring-app:1.1
+kubectl expose deployment sample-spring-app --type=LoadBalancer --port=8080
+kubectl get deployments
+kubectl get pods
+kubectl get services
+kubectl get pod,svc -n kube-system
+
+kubectl apply -f deployment.local.yaml
+
+minikube service sample-spring-app
+
+minikube addons list
+minikube addons enable metrics-server
+minikube addons disable metrics-server
+
+###CLEAN UP
+
+kubectl delete service sample-spring-app
+kubectl delete deployment sample-spring-app
+
+minikube stop
+minikube delete
+
+
+### Docker commands
+
+##### Upload Docker image to dockerhub
+docker login --username=testdata451
+docker images
+docker build -it testdata451/sample-spring-app:1.0 .
+docker tag 7aee6a18aa80 testdata451/sample-spring-app:1.0
+docker push testdata451/sample-spring-app:1.0
+docker build -t mywebapp .
+docker run -p 80:8080 demo
+
+
+###Kafka related data
+https://hub.docker.com/r/bitnami/kafka
+https://www.maestralsolutions.com/spring-boot-implementation-for-apache-kafka-with-kafka-tool/
+Docker Compose:  /Users/ashishkumar/Documents/docker/kafka
+docker-compose up -d
+docker-compose down
